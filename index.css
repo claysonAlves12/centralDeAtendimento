@@ -10,71 +10,16 @@
     text-align: center;
 }
 
-#navegacao{
-    margin-bottom: 20px;
-}
-
-#navegacao nav a{
-    display: inline-block;
-    color: white;
-    border-radius: 20px;
-    text-decoration: none;
-    font-size: 16px;
-    letter-spacing:0.5px;
-    font-weight: 600;
-    padding: 10px 10px;
-    margin: 10px;
-}
-
-.numeroWhats{
-    background-color: #008000;
-}
-
-.link {
-    background-color: #008000;
-}
-
-.link.active  {
-    background-color: #D50C14;
-}
-
-.link.active  img{
-    
-    color: black;
-}
-
-.conteudo {
-    display: none;
-    padding: 20px;
-
-}
-
-.conteudo.ativo {
-    display: block;
-}
-
-#centralDeAtendimento p{
-    font-size: 16px;
-    color: #333; 
-    line-height: 1.6; 
-    text-align: justify;
-}
-
-#centralDeAtendimento img{
-    position: relative;
-    top: -3px;
-}
-
-#pagamentoDeParcelas p a{
+.pagamentoDeParcelas p a{
     font-size: 19px;
     text-decoration: none;
 }
 
-#pagamentoDeParcelas p{
+.pagamentoDeParcelas p{
     line-height: 1.4;
 }
 
-#pagamentoDeParcelas img{
+.pagamentoDeParcelas img{
     position: relative;
     top: -2px;
 }
@@ -90,7 +35,7 @@ li {
     cursor: pointer;
 }
 
-.pergunta{
+.pergunta {
     position: relative;
     font-weight: 500;
     font-size: 20px;
@@ -107,16 +52,17 @@ li {
     margin-top: 10px; 
 }
 
-.pergunta img{
-    transition: transform 0.2s ease;
-}
-
 .pergunta.active p {
     display: block;
+    color: rgb(0, 0, 0);
+    line-height: 1.5;
     padding: 10px;
     border-radius: 10px;
-    background-color: white;
-    animation: fadeIn 1s ease;
+    animation: fadeIn 0.5s ease;
+}
+
+.pergunta.active p a {
+    color: rgb(5, 5, 5);
 }
 
 @keyframes fadeIn {
@@ -128,23 +74,73 @@ li {
     }
 }
 
-.pergunta.active p a {
-    color: rgb(5, 5, 5);
+.pergunta.active p.backgroundModificado{
+    color: rgba(255, 255, 255, 0.774);
+    background-color:#024e14e1;
+    line-height: 1.5;
 }
 
-.pergunta.active a.ajuda{
-    font-weight: 600;
-    color: #05741f;
+.pergunta.active p.textTutorialPagamentoParcelas {
+    line-height: 1.5;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px 5px 5px 50px;
+}
+
+.pergunta.active p.links {
     text-align: center;
-    text-decoration:  underline;
+    margin-top: -20px;
 }
 
-.pergunta.active img{
-    transform: rotate(-180deg); 
-    transition: transform 0.5s ease;
+.pergunta.active p.links a {
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
-.colorText, .pergunta.active p .colorText a{
-    color: #05741f;
+.pergunta.active p.links span {
+    font-weight: bold;
+}
+
+.pergunta.active .ajuda{
+    text-align: center;
+    color: rgb(190, 4, 4);
+}
+
+.links a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:#024e14e1;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.links a:hover {
+    background-color: #077e23;
+}
+
+.links a .arrow {
+    font-size: 20px;
+    margin-right: 5px;
+    transition: font-size 0.3s ease; 
+}
+
+.links a:hover .arrow {
+    font-size: 24px;
+}
+
+.left-arrow,.links a .left-arrow {
+    transform: scaleX(-1);
+    display: inline-block;
+    margin-left: 5px;
+    transition: transform 0.3s ease; 
+}
+
+.links a:hover .left-arrow {
+    transform: scaleX(-1) scale(1.2);
 }
 
