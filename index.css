@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  "Roboto", sans-serif;
+}
+
+#perguntasFrequentes{
+    padding: 20px;
+    text-align: center;
+}
+
+#navegacao{
+    margin-bottom: 20px;
+}
+
+#navegacao nav a{
+    display: inline-block;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing:0.5px;
+    font-weight: 600;
+    padding: 10px 10px;
+    margin: 10px;
+}
+
+.numeroWhats{
+    background-color: #008000;
+}
+
+.link {
+    background-color: #008000;
+}
+
+.link.active  {
+    background-color: #D50C14;
+}
+
+.link.active  img{
+    
+    color: black;
+}
+
+.conteudo {
+    display: none;
+    padding: 20px;
+
+}
+
+.conteudo.ativo {
+    display: block;
+}
+
+#centralDeAtendimento p{
+    font-size: 16px;
+    color: #333; 
+    line-height: 1.6; 
+    text-align: justify;
+}
+
+#centralDeAtendimento img{
+    position: relative;
+    top: -3px;
+}
+
+#pagamentoDeParcelas p a{
+    font-size: 19px;
+    text-decoration: none;
+}
+
+#pagamentoDeParcelas p{
+    line-height: 1.4;
+}
+
+#pagamentoDeParcelas img{
+    position: relative;
+    top: -2px;
+}
+
+ul {
+    margin: 0 0 0 50px;
+    padding: 10px 20px 10px 40px;
+}
+
+li {
+    margin: 10px;
+    color: #333; 
+    cursor: pointer;
+}
+
+.pergunta{
+    position: relative;
+    font-weight: 500;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    background-color: rgba(145, 143, 143, 0.096);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer; 
+}
+
+.pergunta p {
+    display: none;
+    font-size: 18px;
+    margin-top: 10px; 
+}
+
+.pergunta img{
+    transition: transform 0.2s ease;
+}
+
+.pergunta.active p {
+    display: block;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.pergunta.active p a {
+    color: rgb(5, 5, 5);
+}
+
+.pergunta.active a.ajuda{
+    font-weight: 600;
+    color: #05741f;
+    text-align: center;
+    text-decoration:  underline;
+}
+
+.pergunta.active img{
+    transform: rotate(-180deg); 
+    transition: transform 0.5s ease;
+}
+
+.colorText, .pergunta.active p .colorText a{
+    color: #05741f;
+}
+
