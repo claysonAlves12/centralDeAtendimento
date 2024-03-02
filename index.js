@@ -31,6 +31,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
             if (!estaAtiva) {
                 pergunta.classList.add('active');
+                pergunta.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    let links = document.querySelectorAll('.link');
+    links.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            
+            let targetId = this.getAttribute('data-target'); 
+            
+            let targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
             }
         });
     });
