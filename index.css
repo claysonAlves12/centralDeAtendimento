@@ -223,12 +223,14 @@ li {
         height: auto;
     }
 
+    
     .colorText,
     .pergunta.active p .colorText a, 
     .perguntaNormal p .colorText a{
         color: #05741f;
         font-size: 18px;
     }
+    
  
     .link,
     .numeroWhats {
@@ -285,6 +287,10 @@ li {
         font-size: 18px;
     }
 
+    .pergunta p  a.ajuda{
+        font-size: 18px !important;
+    }
+
     .link,
     .numeroWhats {
         background-color: #008000;
@@ -329,20 +335,33 @@ li {
     }
 
     .pergunta,.perguntaNormal {
-       font-size: 15px;
+        width: 100%;
+       font-size: 14px;
     }
+
+    #centralDeAtendimento p,
+    .pergunta p,
+    .perguntaNormal p{
+        font-size: 15px;
+     }
 
     .pergunta img{
         width: 20px;
         height: auto;
     }
+
     .colorText,
-    .pergunta.active p .colorText a, 
+    .pergunta.active p .colorText a,
     .perguntaNormal p .colorText a{
         color: #05741f;
-        font-size: 18px;
+        font-size: 15px;
     }
-    
+   
+    .pergunta p  a.ajuda{
+        font-size: 15px !important;
+    }
+
+
     .link,
     .numeroWhats {
         background-color: #008000;
