@@ -157,7 +157,74 @@ li {
 .pergunta.active p .colorText a, 
 .perguntaNormal p .colorText a{
     color: #05741f;
+} 
+
+
+.list {
+    display: flex;
+    padding: 5px;
 }
+
+.store-info {
+    border-radius: 10px;
+    border: solid 1px #05741F;
+    padding: 10px 0px 0px 10px;
+    width: 350px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin: 0 10px 0 0px;
+}
+
+.store-info:hover {
+    transform: translateY(-5px);
+}
+
+.store-info h3 {
+    color: #333;
+    font-size: 20px;
+}
+
+.store-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.store-info ul li {
+    font-size: 15px;
+    margin: 5px;
+    height: auto;
+}
+
+.store-info .centralTelefone{
+    color: #05741F;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.store-info a {
+    color: #05741F;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.store-info a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
 
