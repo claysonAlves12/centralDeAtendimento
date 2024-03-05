@@ -10,80 +10,16 @@
     text-align: center;
 }
 
-#navegacao{
-    margin-bottom: 20px;
-}
-
-#navegacao nav {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-#navegacao nav a{
-    color: white;
-    border-radius: 20px;
-    text-decoration: none;
-    font-size: 16px;
-    letter-spacing:0.5px;
-    font-weight: 600;
-    padding: 6px 6px;
-    margin: 10px;
-}
-
-
-#navegacao nav a span{
-    position: relative;
-    top: 2px;
-  
-} 
-
-.link,
-.numeroWhats {
-    background-color: #008000;
-    width: 250px;
-}
-
-.link.active  {
-    background-color: #D50C14;
-}
-
-.link.active  img{
-    
-    color: black;
-}
-
-.conteudo {
-    display: none;
-    padding: 20px;
-
-}
-
-.conteudo.ativo {
-    display: block;
-}
-
-#centralDeAtendimento p{
-    font-size: 16px;
-    color: #333; 
-    line-height: 1.6; 
-    text-align: justify;
-}
-
-#centralDeAtendimento img{
-    position: relative;
-    top: -3px;
-}
-
-#pagamentoDeParcelas p a{
+.pagamentoDeParcelas p a{
     font-size: 19px;
     text-decoration: none;
 }
 
-#pagamentoDeParcelas p{
+.pagamentoDeParcelas p{
     line-height: 1.4;
 }
 
-#pagamentoDeParcelas img{
+.pagamentoDeParcelas img{
     position: relative;
     top: -2px;
 }
@@ -99,7 +35,7 @@ li {
     cursor: pointer;
 }
 
-.pergunta,.perguntaNormal{
+.pergunta {
     position: relative;
     font-weight: 500;
     font-size: 20px;
@@ -116,16 +52,17 @@ li {
     margin-top: 10px; 
 }
 
-.pergunta img{
-    transition: transform 0.2s ease;
-}
-
 .pergunta.active p {
     display: block;
+    color: rgb(0, 0, 0);
+    line-height: 1.5;
     padding: 10px;
     border-radius: 10px;
-    background-color: white;
-    animation: fadeIn 1s ease;
+    animation: fadeIn 0.5s ease;
+}
+
+.pergunta.active p a {
+    color: rgb(5, 5, 5);
 }
 
 @keyframes fadeIn {
@@ -137,301 +74,73 @@ li {
     }
 }
 
-.pergunta.active p a {
-    color: rgb(5, 5, 5);
+.pergunta.active p.backgroundModificado{
+    color: rgba(255, 255, 255, 0.774);
+    background-color:#024e14e1;
+    line-height: 1.5;
 }
 
-.pergunta.active a.ajuda{
-    font-weight: 600;
-    color: #05741f;
-    text-align: center;
-    text-decoration:  underline;
-}
-
-.pergunta.active img{
-    transform: rotate(-180deg); 
-    transition: transform 0.5s ease;
-}
-
-.colorText,
-.pergunta.active p .colorText a, 
-.perguntaNormal p .colorText a{
-    color: #05741f;
-} 
-
-
-.list {
-    display: flex;
-    padding: 5px;
-}
-
-.store-info {
+.pergunta.active p.textTutorialPagamentoParcelas {
+    line-height: 1.5;
+    background-color: white;
     border-radius: 10px;
-    border: solid 1px #05741F;
-    padding: 10px 0px 0px 10px;
-    width: 350px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    margin: 0 10px 0 0px;
+    padding: 5px 5px 5px 50px;
 }
 
-.store-info:hover {
-    transform: translateY(-5px);
+.pergunta.active p.links {
+    text-align: center;
+    margin-top: -20px;
 }
 
-.store-info h3 {
-    color: #333;
+.pergunta.active p.links a {
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.pergunta.active p.links span {
+    font-weight: bold;
+}
+
+.pergunta.active .ajuda{
+    text-align: center;
+    color: rgb(190, 4, 4);
+}
+
+.links a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:#024e14e1;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.links a:hover {
+    background-color: #077e23;
+}
+
+.links a .arrow {
     font-size: 20px;
+    margin-right: 5px;
+    transition: font-size 0.3s ease; 
 }
 
-.store-info ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+.links a:hover .arrow {
+    font-size: 24px;
 }
 
-.store-info ul li {
-    font-size: 15px;
-    margin: 5px;
-    height: auto;
+.left-arrow,.links a .left-arrow {
+    transform: scaleX(-1);
+    display: inline-block;
+    margin-left: 5px;
+    transition: transform 0.3s ease; 
 }
 
-.store-info .centralTelefone{
-    color: #05741F;
-    font-size: 15px;
-    font-weight: 600;
-    text-decoration: none;
-}
-.store-info a {
-    color: #05741F;
-    font-size: 18px;
-    font-weight: 600;
-    text-decoration: none;
+.links a:hover .left-arrow {
+    transform: scaleX(-1) scale(1.2);
 }
 
-.store-info a:hover {
-    text-decoration: underline;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (min-width: 992px) and (max-width: 1200px) {
-
-    #navegacao nav a{
-        position: relative;
-        left: 70px;
-        padding: 5px 5px;
-        margin: 5px;
-
-    }
-    
-}
-
-@media screen and (min-width: 768px) and (max-width: 991px) {
-
-    #navegacao nav a{
-        position: relative;
-        left: 85px;
-        padding: 5px 5px;
-        margin: 4px;
-    }
-    
-    ul {
-        margin: 0 0 0 5px;
-        padding: 10px 20px 10px 20px;
-    }
-    
-}
-
-@media screen and (min-width: 536px) and (max-width: 767px) {
-
-    #perguntasFrequentes h1{
-        font-size: 30px;
-    }
-    #navegacao nav a {
-        padding: 6px 6px;
-        margin: 6px 2px;
-        font-size: 1rem;
-    }
-
-    #centralDeAtendimento h2,
-    #comoComprarPeloSite h2,
-    #comprasPeloSite h2,
-    #pagamentoDeParcelas h2,
-    #listaDeCasamento h2,
-    #montagemMoveis h2,
-    #trocaDevolucao h2,
-    #entrega h2{
-        font-size: 25px;
-    }
-
-    ul {
-        margin: 0 0 0 0px;
-        padding: 10px;
-    }
-
-    .pergunta,.perguntaNormal {
-        font-size: 18px;
-    }
-
-    .pergunta img{
-        width: 25px;
-        height: auto;
-    }
-
-    
-    .colorText,
-    .pergunta.active p .colorText a, 
-    .perguntaNormal p .colorText a{
-        color: #05741f;
-        font-size: 18px;
-    }
-    
- 
-    .link,
-    .numeroWhats {
-        background-color: #008000;
-        width: 49%;
-    }
-
-}
-
-@media screen and (min-width: 430px) and (max-width: 535px){
-    #perguntasFrequentes h1{
-        font-size: 30px;
-    }
-    #navegacao nav a {
-        padding: 7px 6px;
-        margin: 6px 2px;
-        font-size: 0.8rem;
-    }
-
-    #navegacao nav a img{
-        width: 15%;
-        height: auto;
-    }
-
-    #centralDeAtendimento h2,
-    #comoComprarPeloSite h2,
-    #comprasPeloSite h2,
-    #pagamentoDeParcelas h2,
-    #listaDeCasamento h2,
-    #montagemMoveis h2,
-    #trocaDevolucao h2,
-    #entrega h2{
-        font-size: 25px;
-    }
-
-    ul {
-        margin: 0 0 0 0px;
-        padding: 10px;
-    }
-
-    .pergunta,.perguntaNormal {
-       font-size: 18px;
-    }
-
-    .pergunta img{
-        width: 20px;
-        height: auto;
-    }
-
-    .colorText,
-    .pergunta.active p .colorText a, 
-    .perguntaNormal p .colorText a{
-        color: #05741f;
-        font-size: 18px;
-    }
-
-    .pergunta p  a.ajuda{
-        font-size: 18px !important;
-    }
-
-    .link,
-    .numeroWhats {
-        background-color: #008000;
-        width: 49%;
-    }
-}
-
-@media screen and (min-width: 0px) and (max-width: 429px){
-    #perguntasFrequentes h1{
-        font-size: 25px;
-    }
-
-    #perguntasFrequentes{
-        margin-bottom: -10px;
-    }
-
-    #navegacao nav a {
-        padding: 7px 6px;
-        margin: 6px 1px;
-        font-size: 0.8rem;
-    }
-
-    #navegacao nav a img{
-        width: 0%;
-        height: auto;
-    }
-
-    #centralDeAtendimento h2,
-    #comoComprarPeloSite h2,
-    #comprasPeloSite h2,
-    #pagamentoDeParcelas h2,
-    #listaDeCasamento h2,
-    #montagemMoveis h2,
-    #trocaDevolucao h2,
-    #entrega h2{
-        font-size: 20px;
-    }
-
-    ul {
-        margin: 0 0 0 0px;
-        padding: 10px;
-    }
-
-    .pergunta,.perguntaNormal {
-        width: 100%;
-       font-size: 14px;
-    }
-
-    #centralDeAtendimento p,
-    .pergunta p,
-    .perguntaNormal p{
-        font-size: 15px;
-     }
-
-    .pergunta img{
-        width: 20px;
-        height: auto;
-    }
-
-    .colorText,
-    .pergunta.active p .colorText a,
-    .perguntaNormal p .colorText a{
-        color: #05741f;
-        font-size: 15px;
-    }
-   
-    .pergunta p  a.ajuda{
-        font-size: 15px !important;
-    }
-
-
-    .link,
-    .numeroWhats {
-        background-color: #008000;
-        width: 49%;
-    }
-}
