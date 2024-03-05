@@ -97,7 +97,7 @@ function obterLocalizacao(destino) {
     window.open(link, "_blank");
 
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        window.open("https://maps.google.com/?q=" + destinoCoords.latitude + "," + destinoCoords.longitude);
+         window.location.href = "https://maps.apple.com/?daddr=" + destinoCoords.latitude + "," + destinoCoords.longitude;
       } else {
         window.open(link, "_blank");
     }
