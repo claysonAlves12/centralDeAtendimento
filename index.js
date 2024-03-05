@@ -63,7 +63,7 @@ function obterLocalizacao(destino) {
       alert("Geolocalização não é suportada neste navegador.");
     }
   }
-   -11.736329594351318, -49.07593032990577 
+
   function mostrarLocalizacao(posicao, destino) {
     let latitude = posicao.coords.latitude;
     let longitude = posicao.coords.longitude;
@@ -95,4 +95,10 @@ function obterLocalizacao(destino) {
     // Cria o link com as coordenadas do destino
     let link = "https://www.google.com/maps/dir/" + latitude + "," + longitude + "/" + destinoCoords.latitude + "," + destinoCoords.longitude;
     window.open(link, "_blank");
+
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        window.open("https://maps.google.com/?q=" + destinoCoords.latitude + "," + destinoCoords.longitude);
+      } else {
+        window.open(link, "_blank");
+    }
   }
