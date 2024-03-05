@@ -63,7 +63,7 @@ function obterLocalizacao(destino) {
       alert("Geolocalização não é suportada neste navegador.");
     }
   }
- /*  -11.736329594351318, -49.07593032990577 */
+   -11.736329594351318, -49.07593032990577 
   function mostrarLocalizacao(posicao, destino) {
     let latitude = posicao.coords.latitude;
     let longitude = posicao.coords.longitude;
