@@ -30,7 +30,6 @@
     margin: 10px;
 }
 
-
 #navegacao nav a span{
     position: relative;
     top: 2px;
@@ -152,6 +151,23 @@ li {
     transform: rotate(-180deg); 
     transition: transform 0.5s ease;
 }
+
+.pergunta.active #player {
+    margin-top: 20px;
+    position: relative;
+    left: 100px;
+    width: 80%;
+    height: 400px;
+    border: 1px solid #418F2A;
+    border-radius: 20px;
+    transform: rotate(0deg) scale(1);
+    transition: transform 0.3s ease; 
+}
+
+.pergunta.active #player:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
 
 .colorText,
 .pergunta.active p .colorText a, 

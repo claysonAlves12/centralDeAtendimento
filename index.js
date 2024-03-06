@@ -54,21 +54,41 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-function obterLocalizacao(destino) {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function(posicao) {
-        mostrarLocalizacao(posicao, destino);
-      });
-    } else {
-      alert("Geolocalização não é suportada neste navegador.");
-    }
-  }
 
-  function mostrarLocalizacao(posicao, destino) {
+//Api do youtub para controlar o video
+let player;
+
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player', {
+    height: '360',
+    width: '640',
+    videoId: 'tpEGtsMf_5U',
+    playerVars: {
+      'controls': 0 
+    },
+    events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    }
+  });
+}
+
+function onPlayerReady(event) {
+  event.target.playVideo();
+}
+
+function onPlayerStateChange(event) {
+  if (event.data == YT.PlayerState.ENDED) {
+    player.seekTo(2.5); 
+  }
+}
+ 
+//localização das lojas
+function mostrarLocalizacao(posicao, destino) {
     let latitude = posicao.coords.latitude;
     let longitude = posicao.coords.longitude;
     
-    // Define as coordenadas das lojas
+    
     const coordenadasLojas = {
       lojaMatriz: { latitude:-7.1904374624209035, longitude:-48.21272309404203 }, 
       lojaPalmasCentro: { latitude:-10.183068519555283, longitude:-48.325667030423055 }, 
@@ -89,16 +109,18 @@ function obterLocalizacao(destino) {
       lojaSantaInes: { latitude:-3.6676205812389173, longitude:-45.37413074309012}
     };
 
-    // Obtém as coordenadas do destino selecionado
+   
     let destinoCoords = coordenadasLojas[destino];
 
-    // Cria o link com as coordenadas do destino
+    
     let link = "https://www.google.com/maps/dir/" + latitude + "," + longitude + "/" + destinoCoords.latitude + "," + destinoCoords.longitude;
     window.open(link, "_blank");
 
+
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-          window.location.href = "https://maps.google.com/?daddr=" + destinoCoords.latitude + "," + destinoCoords.longitude;
+        window.location.href = "https://maps.google.com/?daddr=" + destinoCoords.latitude + "," + destinoCoords.longitude;
       } else {
         window.open(link, "_blank");
-    }
-  }
+      }
+    
+}
