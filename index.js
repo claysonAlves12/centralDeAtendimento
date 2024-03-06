@@ -54,35 +54,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
-//Api do youtub para controlar o video
-let player;
-
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player('player', {
-    height: '360',
-    width: '640',
-    videoId: 'tpEGtsMf_5U',
-    playerVars: {
-      'controls': 0 
-    },
-    events: {
-      'onReady': onPlayerReady,
-      'onStateChange': onPlayerStateChange
-    }
-  });
-}
-
-function onPlayerReady(event) {
-  event.target.playVideo();
-}
-
-function onPlayerStateChange(event) {
-  if (event.data == YT.PlayerState.ENDED) {
-    player.seekTo(2.5); 
-  }
-}
- 
 //localização das lojas
 function mostrarLocalizacao(posicao, destino) {
     let latitude = posicao.coords.latitude;

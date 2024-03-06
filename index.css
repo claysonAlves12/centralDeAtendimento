@@ -152,7 +152,7 @@ li {
     transition: transform 0.5s ease;
 }
 
-.pergunta.active #player {
+.pergunta.active .giftDoisCartao {
     margin-top: 20px;
     position: relative;
     left: 100px;
@@ -164,7 +164,7 @@ li {
     transition: transform 0.3s ease; 
 }
 
-.pergunta.active #player:hover {
+.pergunta.active .giftDoisCartao:hover {
     transform: rotate(0deg) scale(1.02);
 }
 
