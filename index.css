@@ -152,6 +152,27 @@ li {
     transition: transform 0.5s ease;
 }
 
+.pergunta.active span.tutorialVendedores{
+    display: inline-block;
+    text-align: center;
+    margin-right: 2px;
+    font-size: 20px;
+    color: #3C8A25;
+}
+
+.pergunta.active img.vendedores{
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 295px;
+    height: auto;
+    transform: rotate(0deg);  
+}
+
+.pergunta.active span.marginVendedores{
+    position: relative;
+    top: -55px;
+}
+
 .pergunta.active .giftDoisCartao {
     margin-top: 20px;
     position: relative;
@@ -167,7 +188,6 @@ li {
 .pergunta.active .giftDoisCartao:hover {
     transform: rotate(0deg) scale(1.02);
 }
-
 
 .colorText,
 .pergunta.active p .colorText a, 
