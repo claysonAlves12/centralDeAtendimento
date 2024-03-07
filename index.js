@@ -54,6 +54,46 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
+// Api do youtub para criar o plauer
+function onYouTubeIframeAPIReady() {
+    var playerContainer = document.getElementById('player');
+
+    if (playerContainer) {
+        var player = new YT.Player(playerContainer, {
+            height: '315',
+            width: '560',
+            videoId: 'tpEGtsMf_5U', 
+            playerVars: {
+                'autoplay': 1,
+                'controls': 0,
+                'rel': 0,
+                'showinfo': 0
+            },
+            events: {
+                'onStateChange': onPlayerStateChange
+            }
+        });
+    } else {
+        console.error('Div com ID "player" não encontrada.');
+    }
+
+    function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.ENDED) {
+            var currentTime = player.getCurrentTime();
+            var duration = player.getDuration();
+
+            if (duration - currentTime < 1) {
+                player.seekTo(0);
+                player.playVideo();
+            }
+        }
+    }
+}
+
+
+
+
 //localização das lojas
 function mostrarLocalizacao(posicao, destino) {
     let latitude = posicao.coords.latitude;
