@@ -1,29 +1,36 @@
 document.addEventListener("DOMContentLoaded", function() {
-    let links = document.querySelectorAll(".link");
+    const links = document.querySelectorAll(".link");
+    const perguntas = document.querySelectorAll('.pergunta');
+
     links.forEach(function(link) {
         link.addEventListener("click", function(event) {
             event.preventDefault();
-            let targetId = this.getAttribute("data-target");
-            let targetElement = document.getElementById(targetId);
-            let contents = document.querySelectorAll(".conteudo");
-            contents.forEach(function(content) {
-                if (content !== targetElement) {
-                    content.classList.remove("ativo");
+            const targetId = this.getAttribute("data-target");
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                const contents = document.querySelectorAll(".conteudo");
+                contents.forEach(function(content) {
+                    if (content !== targetElement) {
+                        content.classList.remove("ativo");
+                    }
+                });
+                targetElement.classList.toggle("ativo");
+                
+                const activeLink = document.querySelector(".link.active");
+                if (activeLink) {
+                    activeLink.classList.remove("active");
                 }
-            });
-            targetElement.classList.toggle("ativo");
-            let activeLink = document.querySelector(".link.active");
-            if (activeLink) {
-                activeLink.classList.remove("active");
+                this.classList.add("active");
             }
-            this.classList.add("active");
         });
     });
 
-    let perguntas = document.querySelectorAll('.pergunta');
     perguntas.forEach(function(pergunta) {
-        pergunta.addEventListener('click', function() {
-            let estaAtiva = pergunta.classList.contains('active');
+        const contenedorPergunta = pergunta.querySelector('.container-pergunta'); 
+
+        contenedorPergunta.addEventListener('click', function() { 
+            const estaAtiva = pergunta.classList.contains('active');
 
             perguntas.forEach(function(outraPergunta) {
                 outraPergunta.classList.remove('active');
@@ -35,17 +42,15 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
-});
 
-document.addEventListener("DOMContentLoaded", function() {
-    let links = document.querySelectorAll('.link');
+    // Adicionando a funcionalidade de rolagem suave para os links após o carregamento do DOM
     links.forEach(function(link) {
         link.addEventListener('click', function(event) {
             event.preventDefault(); 
             
-            let targetId = this.getAttribute('data-target'); 
+            const targetId = this.getAttribute('data-target'); 
             
-            let targetElement = document.getElementById(targetId);
+            const targetElement = document.getElementById(targetId);
             
             if (targetElement) {
                 targetElement.scrollIntoView({ behavior: 'smooth' });
