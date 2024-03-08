@@ -110,7 +110,6 @@ li {
 .pergunta.active div.container-pergunta,
 .pergunta div.container-pergunta{
     cursor: pointer;
-    background-color: red; 
 }
 
 .pergunta p {
