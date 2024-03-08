@@ -95,7 +95,6 @@ ul {
 li {
     margin: 10px;
     color: #333; 
-    cursor: pointer;
 }
 
 .pergunta,.perguntaNormal{
@@ -106,9 +105,13 @@ li {
     background-color: rgba(145, 143, 143, 0.096);
     padding: 10px;
     border-radius: 10px;
-    cursor: pointer; 
 }
 
+.pergunta.active div.container-pergunta,
+.pergunta div.container-pergunta{
+    cursor: pointer;
+    background-color: red; 
+}
 
 .pergunta p {
     display: none;
