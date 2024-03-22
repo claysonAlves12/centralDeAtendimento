@@ -1,3 +1,5 @@
+
+// remover conteúdo , deixando somente os topicos ou categorias dependendo de como o usuario utilizar.
 document.addEventListener("DOMContentLoaded", function() {
     const links = document.querySelectorAll(".link");
     const perguntas = document.querySelectorAll('.pergunta');
@@ -43,7 +45,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Adicionando a funcionalidade de rolagem suave para os links após o carregamento do DOM
     links.forEach(function(link) {
         link.addEventListener('click', function(event) {
             event.preventDefault(); 
@@ -59,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+//ampliar imagem para dispositivos pequenos
 document.addEventListener("DOMContentLoaded", function() {
     const imagens = document.querySelectorAll(".cupomDeDesconto img, .tutorialPixECartao img, .tutorialDoisCartoes img");
     
@@ -78,14 +80,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
-
-
-
-
-
-
-
 //Obter localização inicial 
 function obterLocalizacao(destino) {
     if (navigator.geolocation) {
@@ -93,7 +87,7 @@ function obterLocalizacao(destino) {
         mostrarLocalizacao(position, destino);
       });
     } else {
-      alert("Geolocation is not supported by this browser.");
+      alert("Este navegador não suporta a funcionalidade de Geolocalização");
     }
 }
 
@@ -101,7 +95,6 @@ function obterLocalizacao(destino) {
 function mostrarLocalizacao(posicao, destino) {
     let latitude = posicao.coords.latitude;
     let longitude = posicao.coords.longitude;
-    
     
     const coordenadasLojas = {
       lojaMatriz: { latitude:-7.1904374624209035, longitude:-48.21272309404203 }, 
@@ -123,10 +116,8 @@ function mostrarLocalizacao(posicao, destino) {
       lojaSantaInes: { latitude:-3.6676205812389173, longitude:-45.37413074309012}
     };
 
-   
     let destinoCoords = coordenadasLojas[destino];
 
-    
     let link = "https://www.google.com/maps/dir/" + latitude + "," + longitude + "/" + destinoCoords.latitude + "," + destinoCoords.longitude;
     window.open(link, "_blank");
 

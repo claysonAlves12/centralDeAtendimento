@@ -701,14 +701,18 @@ li {
         width: 49%;
     }
 
-    
-    .list {
-        margin: 0 0 0 15px;
+    .conteudo{
+        padding: 5px;
     }
 
+    .list {
+        padding: 0;
+        margin: 0 0 0 0px;
+    }
     .infoLojas {
+        margin: 0 0 5px 0;
         text-align: center;
-        width: calc(80%);
+        width: calc(100%);
     }
 
     .buttonRota {
