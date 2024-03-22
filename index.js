@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const links = document.querySelectorAll(".link");
     const perguntas = document.querySelectorAll('.pergunta');
 
-    links.forEach(function(link) {
+    links.forEach((link) => {
         link.addEventListener("click", function(event) {
             event.preventDefault();
             const targetId = this.getAttribute("data-target");
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    perguntas.forEach(function(pergunta) {
+    perguntas.forEach((pergunta) => {
         const contenedorPergunta = pergunta.querySelector('.container-pergunta'); 
 
         contenedorPergunta.addEventListener('click', function() { 
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    links.forEach(function(link) {
+    links.forEach((link) => {
         link.addEventListener('click', function(event) {
             event.preventDefault(); 
             
@@ -62,23 +62,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //ampliar imagem para dispositivos pequenos
 document.addEventListener("DOMContentLoaded", function() {
+    if (window.innerWidth <= 429) {
     const imagens = document.querySelectorAll(".cupomDeDesconto img, .tutorialPixECartao img, .tutorialDoisCartoes img");
     
-    imagens.forEach(img => {
-        img.addEventListener("click", function() {
-            const isAmpliada = this.classList.contains("ampliada");
+        imagens.forEach(img => {
+            img.addEventListener("click", function() {
+                const isAmpliada = this.classList.contains("ampliada");
 
-            imagens.forEach(img => img.classList.remove("ampliada"));
+                imagens.forEach(img => img.classList.remove("ampliada"));
 
-            if (!isAmpliada) {
-                this.classList.add("ampliada");
-                console.log("ampliou");
-            } else {
-                console.log("desampliou");
-            }
+                if (!isAmpliada) {
+                    this.classList.add("ampliada");
+                } 
+            });
         });
-    });
+    }
 });
+
 
 //Obter localização inicial 
 function obterLocalizacao(destino) {

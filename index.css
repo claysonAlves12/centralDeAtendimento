@@ -4,7 +4,9 @@
     box-sizing: border-box;
     font-family:  "Roboto", sans-serif;
 }
-
+body,html{
+    overflow-x: hidden;
+} 
 #perguntasFrequentes{
     padding: 20px;
     text-align: center;
@@ -33,7 +35,6 @@
 #navegacao nav a span{
     position: relative;
     top: 2px;
-  
 } 
 
 .link,
@@ -124,15 +125,6 @@ li {
     animation: fadeIn 1s ease;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 .pergunta.active p a {
     color: rgb(5, 5, 5);
 }
@@ -144,14 +136,12 @@ li {
     word-break: break-all;
 }
 
-
 .pergunta.active img{
     transform: rotate(-180deg); 
     transition: transform 0.5s ease;
 }
 
-.pergunta.active strong.exemplosTutoriais{
-    
+.pergunta.active strong.exemplosTutoriais{  
     color: red;
     font-weight: bold;
     font-size: 20px;    
@@ -175,8 +165,6 @@ li {
     transform: rotate(0deg);  
 }
 
-
-
 .pergunta.active img.cupomDesconto,
 .pergunta.active img.doisCartao,
 .pergunta.active img.pixECartao{
@@ -195,7 +183,6 @@ li {
     flex-wrap: wrap; 
     padding: 5px;
     margin: 0 0 0 60px;
-
 }
 
 .infoLojas {
@@ -268,24 +255,20 @@ li {
     background-color: #006400; 
 }
 
-
-
 @media screen and (min-width: 992px) and (max-width: 1200px) {
-
     #navegacao nav a{
         position: relative;
         left: 70px;
         padding: 5px 5px;
         margin: 5px;
-
     }
+
     .list {
         margin: 0 0 0 10px;
     }
 
     .infoLojas .marginHorarioDois{
         margin: 50px 0 0 0;
-
     }
 
     .infoLojas .marginHorarioTres{
@@ -298,7 +281,6 @@ li {
     .infoLojas .marginHorarioCinco{
         margin: 27px 0 0 0;
     }
-
     
     .pergunta.active img.cupomDesconto,
     .pergunta.active img.doisCartao,
@@ -309,7 +291,6 @@ li {
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-
     #navegacao nav a{
         position: relative;
         left: 85px;
@@ -336,17 +317,14 @@ li {
     .pergunta.active img.doisCartao,
     .pergunta.active img.pixECartao{
         width: 270px;
-    }
-
-
-  
+    }  
 }
 
 @media screen and (min-width: 536px) and (max-width: 767px) {
-
     #perguntasFrequentes h1{
         font-size: 30px;
     }
+
     #navegacao nav a {
         padding: 6px 6px;
         margin: 6px 2px;
@@ -373,6 +351,7 @@ li {
         display: inline-block;
         margin: 0px 0 10px 0;
     }
+
     .pergunta {
         font-size: 18px;
     }
@@ -382,14 +361,12 @@ li {
         height: auto;
     }
 
-    
     .colorText,
     .pergunta.active p .colorText a{
         color: #05741f;
         font-size: 18px;
     }
     
- 
     .link,
     .numeroWhats {
         background-color: #008000;
@@ -404,6 +381,7 @@ li {
         text-align: center;
         width: calc(80%);
     }
+
     .buttonRota {
         transform: translate(0%, 10%);
         transition: background-color 0.3s;
@@ -422,7 +400,6 @@ li {
     .pergunta.active img.vendedores,
     .pergunta.active img.crediario{
         width: 260px;
-
     }
 
     .pergunta.active img.cupomDesconto,
@@ -430,8 +407,6 @@ li {
     .pergunta.active img.pixECartao{
         width: 380px;
     }
-
-  
 }
 
 @media screen and (min-width: 430px) and (max-width: 535px){
@@ -443,7 +418,6 @@ li {
 
     li {
         margin: 0 0 10px 0;
-        color: #333; 
     }
 
     #navegacao nav a {
@@ -457,14 +431,11 @@ li {
         height: auto;
     }
 
-
-
     #centralDeAtendimento p span.margin{
         display: inline-block;
         margin: 0px 0 10px 0;
     }
 
- 
     #centralDeAtendimento h2,
     #comoComprarPeloSite h2,
     #comprasPeloSite h2,
@@ -516,15 +487,12 @@ li {
         font-size: 18px;
     }
 
-
-
     .link,
     .numeroWhats {
         background-color: #008000;
         width: 49%;
     }
 
-    
     .list {
         margin: 0 0 0 15px;
     }
@@ -533,11 +501,11 @@ li {
         text-align: center;
         width: calc(80%);
     }
+
     .buttonRota {
         transform: translate(0%, 10%);
         transition: background-color 0.3s;
     }
-
     
     .pergunta.active span.cupomDeDesconto,
     .pergunta.active span.tutorialVendedores,
@@ -563,7 +531,6 @@ li {
 }
 
 @media screen and (min-width: 0px) and (max-width: 429px){
-
     ul {
         margin: 0 0 0 0px;
         padding: 0px 0px 0px 0px;
@@ -574,7 +541,6 @@ li {
         margin: 0 0 10px 0;
         color: #333; 
     }
-
 
     #perguntasFrequentes h1{
         font-size: 25px;
@@ -639,8 +605,7 @@ li {
     }
 
     .pergunta img{
-  
-       max-width: 20px;
+        max-width: 20px;
         width: 100%;
         height: auto;
     }
@@ -650,10 +615,7 @@ li {
         color: #05741f;
         font-size: 15px;
     }
-    
-
-
-   
+       
     .link,
     .numeroWhats {
         background-color: #008000;
@@ -679,15 +641,11 @@ li {
     .pergunta.active img.pixECartao.ampliada,
     .pergunta.active img.doisCartao.ampliada,
     .pergunta.active img.cupomDesconto.ampliada {
-        transform: scale(1.4); 
+        transform: scale(1.2); 
         transition: transform 0.3s ease;
         z-index: 1;
     }
 
- 
-
-
-    
     .pergunta.active img.cupomDesconto,
     .pergunta.active img.doisCartao,
     .pergunta.active img.pixECartao{
@@ -709,6 +667,7 @@ li {
         padding: 0;
         margin: 0 0 0 0px;
     }
+
     .infoLojas {
         margin: 0 0 5px 0;
         text-align: center;
