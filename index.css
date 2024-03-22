@@ -174,7 +174,6 @@ li {
     gap: 20px; 
 }
 
-
 .pergunta.active img.vendedores,
 .pergunta.active img.crediario{
     width: 220px;
@@ -190,14 +189,11 @@ li {
     transform: rotate(0deg);  
 }
 
-
-
 .colorText,
 .pergunta.active p .colorText a, 
 .perguntaNormal p .colorText a{
     color: #05741f;
 } 
-
 
 .list {
     display: flex;
@@ -240,7 +236,6 @@ li {
 
 .infoLojas .marginHorario{
     margin: 30px 0 0 0px;
-
 }
 
 .infoLojas .centralTelefone{
@@ -308,6 +303,14 @@ li {
     .infoLojas .marginHorarioCinco{
         margin: 27px 0 0 0;
     }
+
+    
+    .pergunta.active img.cupomDesconto,
+    .pergunta.active img.doisCartao,
+    .pergunta.active img.pixECartao{
+        width: 350px;
+    }
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -327,6 +330,20 @@ li {
     .infoLojas {
         width: calc(45%);
     }
+
+    .pergunta.active img.vendedores,
+    .pergunta.active img.crediario{
+        width: 170px;
+
+    }
+
+    .pergunta.active img.cupomDesconto,
+    .pergunta.active img.doisCartao,
+    .pergunta.active img.pixECartao{
+        width: 270px;
+    }
+
+
   
 }
 
@@ -393,10 +410,33 @@ li {
         transform: translate(0%, 10%);
         transition: background-color 0.3s;
     }
+
+    .pergunta.active span.cupomDeDesconto,
+    .pergunta.active span.tutorialVendedores,
+    .pergunta.active span.tutorialCrediario,
+    .pergunta.active span.tutorialDoisCartoes,
+    .pergunta.active span.tutorialPixECartao {
+        align-items: center;
+        flex-direction: column;
+        gap: 10px; 
+    }
+
+    .pergunta.active img.vendedores,
+    .pergunta.active img.crediario{
+        width: 260px;
+
+    }
+
+    .pergunta.active img.cupomDesconto,
+    .pergunta.active img.doisCartao,
+    .pergunta.active img.pixECartao{
+        width: 380px;
+    }
+
   
 }
 
-@media screen and (min-width: 0px) and (max-width: 535px){
+@media screen and (min-width: 430px) and (max-width: 535px){
     #perguntasFrequentes h1{
         font-size: 30px;
     }
@@ -465,6 +505,29 @@ li {
     .buttonRota {
         transform: translate(0%, 10%);
         transition: background-color 0.3s;
+    }
+
+    
+    .pergunta.active span.cupomDeDesconto,
+    .pergunta.active span.tutorialVendedores,
+    .pergunta.active span.tutorialCrediario,
+    .pergunta.active span.tutorialDoisCartoes,
+    .pergunta.active span.tutorialPixECartao {
+        align-items: center;
+        flex-direction: column;
+        gap: 4px; 
+    }
+
+    .pergunta.active img.vendedores,
+    .pergunta.active img.crediario{
+        width: 230px;
+
+    }
+
+    .pergunta.active img.cupomDesconto,
+    .pergunta.active img.doisCartao,
+    .pergunta.active img.pixECartao{
+        width: 300px;
     }
 }
 
@@ -536,5 +599,29 @@ li {
     .numeroWhats {
         background-color: #008000;
         width: 49%;
+    }
+
+    .pergunta.active span.cupomDeDesconto,
+    .pergunta.active span.tutorialVendedores,
+    .pergunta.active span.tutorialCrediario,
+    .pergunta.active span.tutorialDoisCartoes,
+    .pergunta.active span.tutorialPixECartao {
+        align-items: center;
+        flex-direction: column;
+        gap: 4px; 
+    }
+
+    .pergunta.active img.vendedores,
+    .pergunta.active img.crediario{
+       max-width: 230px;
+       width: 100%;
+
+    }
+
+    .pergunta.active img.cupomDesconto,
+    .pergunta.active img.doisCartao,
+    .pergunta.active img.pixECartao{
+        max-width: 300px;
+        width: 100%;
     }
 }
