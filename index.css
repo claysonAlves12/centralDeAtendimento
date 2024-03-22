@@ -175,6 +175,8 @@ li {
     transform: rotate(0deg);  
 }
 
+
+
 .pergunta.active img.cupomDesconto,
 .pergunta.active img.doisCartao,
 .pergunta.active img.pixECartao{
@@ -672,9 +674,20 @@ li {
     .pergunta.active img.crediario{
        max-width: 230px;
        width: 100%;
-
     }
 
+    .pergunta.active img.pixECartao.ampliada,
+    .pergunta.active img.doisCartao.ampliada,
+    .pergunta.active img.cupomDesconto.ampliada {
+        transform: scale(1.4); 
+        transition: transform 0.3s ease;
+        z-index: 1;
+    }
+
+ 
+
+
+    
     .pergunta.active img.cupomDesconto,
     .pergunta.active img.doisCartao,
     .pergunta.active img.pixECartao{

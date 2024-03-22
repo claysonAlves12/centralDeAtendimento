@@ -59,8 +59,24 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const imagens = document.querySelectorAll(".cupomDeDesconto img, .tutorialPixECartao img, .tutorialDoisCartoes img");
+    
+    imagens.forEach(img => {
+        img.addEventListener("click", function() {
+            const isAmpliada = this.classList.contains("ampliada");
 
+            imagens.forEach(img => img.classList.remove("ampliada"));
 
+            if (!isAmpliada) {
+                this.classList.add("ampliada");
+                console.log("ampliou");
+            } else {
+                console.log("desampliou");
+            }
+        });
+    });
+});
 
 
 
@@ -79,8 +95,7 @@ function obterLocalizacao(destino) {
     } else {
       alert("Geolocation is not supported by this browser.");
     }
-  }
-
+}
 
 //localização das lojas
 function mostrarLocalizacao(posicao, destino) {
@@ -118,8 +133,8 @@ function mostrarLocalizacao(posicao, destino) {
 
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         window.location.href = "https://maps.google.com/?daddr=" + destinoCoords.latitude + "," + destinoCoords.longitude;
-      } else {
+    } else {
         window.open(link, "_blank");
-      }
+    }
     
 }
